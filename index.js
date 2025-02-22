@@ -21,27 +21,27 @@ app.use(express.static(path.join(__dirname , "public")));
 let posts = [
     {
         id: uuidv4(),
-        username: "@ameyvyas",
+        username: "Ameyvyas",
         content: "Nvidia CEO Jensen Huang addressed investor concerns after a $600 billion market value drop, clarifying that the market misunderstood the implications of DeepSeek's new AI model Huang emphasized the ongoing need for powerful computing in AI development"
     },
     {
         id: uuidv4(),
-        username: "@aayushi",
+        username: "Aayushi",
         content: "Mid-Career Opportunities: Machine learning has opened up new career opportunities for mid-career professionals. With businesses across industries adopting automation and leveraging data, roles such as ML engineers, data scientists, and AI research scientists are in high demand"
     },
     {
         id: uuidv4(),
-        username: "@aayush",
+        username: "Aayush",
         content: "KAIROSOFT AI Solutions Limited is set to launch a rights issue to fuel growth amidst rising demand for AI solutions. This reflects the robust demand from investors and the growing strength of the Indian AI sector."
     },
     {
         id: uuidv4(),
-        username: "@gauvrav",
+        username: "Gauvrav",
         content: "RBI's Deep Check: The Reserve Bank of India (RBI) is leveraging AI and machine learning tools to predict future outcomes, spot abnormal activities, and manage risks in the financial landscape. These models are being used for 'stress testing' banks to ensure they have enough capital to absorb economic shocks."
     },
     {
         id: uuidv4(),
-        username: "@uday",
+        username: "Uday",
         content: "Meta Layoffs and Hiring: Meta is set to conduct global layoffs starting February 10, 2025. However, the company is also expediting the hiring of machine learning engineers to align with its strategic priorities for 2025!"
     }
     
