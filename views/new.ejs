@@ -3,16 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New Post</title>
+    <title>Create New Post | Social Feed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <form method="post" action="/posts">
-        <input placeholder="Enter you Username" name="username"> <br> <br>
-        <textarea placeholder="Enter your Content" name="content"></textarea> <br>
-        <button>Submit Post</button>
-    </form>
+<body class="bg-gray-50 min-h-screen font-['Poppins']">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center">
+                    <h1 class="text-2xl font-bold text-indigo-600">Social Feed</h1>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="p-8">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900">Create a New Post</h2>
+                    <p class="mt-2 text-gray-600">Share your thoughts with the community</p>
+                </div>
+
+                <form method="post" action="/posts" class="space-y-6">
+                    <!-- Username Field -->
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <input 
+                                type="text" 
+                                name="username" 
+                                id="username"
+                                required
+                                class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+                                placeholder="Enter your username"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Content Field -->
+                    <div>
+                        <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
+                        <div class="mt-1">
+                            <textarea
+                                name="content"
+                                id="content"
+                                required
+                                rows="5"
+                                class="block w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+                                placeholder="What's on your mind?"
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex items-center justify-end space-x-3 pt-4">
+                        <a 
+                            href="/"
+                            class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
+                        >
+                            Cancel
+                        </a>
+                        <button
+                            type="submit"
+                            class="inline-flex items-center px-6 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                            Create Post
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="mt-8 bg-indigo-50 rounded-xl p-6">
+            <h3 class="text-lg font-semibold text-indigo-900 mb-3">Tips for Great Posts</h3>
+            <ul class="space-y-2">
+                <li class="flex items-center text-sm text-indigo-800">
+                    <svg class="h-4 w-4 mr-2 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Keep your content clear and concise
+                </li>
+                <li class="flex items-center text-sm text-indigo-800">
+                    <svg class="h-4 w-4 mr-2 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Be respectful to other community members
+                </li>
+                <li class="flex items-center text-sm text-indigo-800">
+                    <svg class="h-4 w-4 mr-2 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Share meaningful and engaging content
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <p class="text-center text-sm text-gray-500">© 2024 Social Feed. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

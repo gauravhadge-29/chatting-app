@@ -21,19 +21,30 @@ app.use(express.static(path.join(__dirname , "public")));
 let posts = [
     {
         id: uuidv4(),
-        username: "Dhoni",
-        content: "I Love Coding!"
+        username: "@ameyvyas",
+        content: "Nvidia CEO Jensen Huang addressed investor concerns after a $600 billion market value drop, clarifying that the market misunderstood the implications of DeepSeek's new AI model Huang emphasized the ongoing need for powerful computing in AI development"
     },
     {
         id: uuidv4(),
-        username: "Sammy",
-        content: "I Love solving Maths problem!"
+        username: "@aayushi",
+        content: "Mid-Career Opportunities: Machine learning has opened up new career opportunities for mid-career professionals. With businesses across industries adopting automation and leveraging data, roles such as ML engineers, data scientists, and AI research scientists are in high demand"
     },
     {
         id: uuidv4(),
-        username: "Kholi",
-        content: "I got selected for my first Internship!"
+        username: "@aayush",
+        content: "KAIROSOFT AI Solutions Limited is set to launch a rights issue to fuel growth amidst rising demand for AI solutions. This reflects the robust demand from investors and the growing strength of the Indian AI sector."
+    },
+    {
+        id: uuidv4(),
+        username: "@gauvrav",
+        content: "RBI's Deep Check: The Reserve Bank of India (RBI) is leveraging AI and machine learning tools to predict future outcomes, spot abnormal activities, and manage risks in the financial landscape. These models are being used for 'stress testing' banks to ensure they have enough capital to absorb economic shocks."
+    },
+    {
+        id: uuidv4(),
+        username: "@uday",
+        content: "Meta Layoffs and Hiring: Meta is set to conduct global layoffs starting February 10, 2025. However, the company is also expediting the hiring of machine learning engineers to align with its strategic priorities for 2025!"
     }
+    
 ];
 
 // Routes
@@ -52,7 +63,7 @@ app.post("/posts" , (req , res) => {
     let {username , content} = req.body;
     let id = uuidv4();
     posts.push({id , username , content});
-    res.redirect("/posts");
+    res.redirect("/");
 });
 
 // 4. Show a single post
@@ -91,7 +102,7 @@ app.get("/posts/:id/edit" , (req , res) => {
 app.delete("/posts/:id" , (req,res) => {
     let {id} = req.params;
     posts = posts.filter((p) => p.id !== id);
-    res.redirect("/posts");
+    res.redirect("/");
 });
 
 // Start the Server
