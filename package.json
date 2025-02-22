@@ -1,0 +1,20 @@
+{
+  "name": "rest_class",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Vishal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "method-override": "^3.0.0",
+    "nodemon": "^3.1.9",
+    "uuid": "^11.0.5"
+  },
+  "description": ""
+}
